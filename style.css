@@ -1,0 +1,178 @@
+	.fixed-nav-bar {  
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  width: 100%;
+		  height: 70px;
+		  background-color: #669999;
+		}
+
+		.menu {
+		  width: 90%;
+		  max-width: 960px;
+		  margin: 0 auto;
+		}
+
+		.sitename {
+		 
+		  margin-right: 10px;
+		  margin-left: 5px;
+		  margin-bottom: 20px;
+		  color: #ffffff;
+		  font-size: 50px;
+		  font-family: "Georgia";
+		  font-weight: bold;
+		  letter-spacing: 2px;
+		}
+
+		.caption {
+			margin-left: 20px;
+			font-size: 20px;
+			color: #e5f7ff ;
+		}
+
+		.search-input {
+		  border: 1px solid transparent;
+		  border-radius: 2px 0 0 2px;
+		  margin-left: 40px;
+		  width: 280px;
+		  height: 32px;
+		  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		  margin-bottom: 10px;
+		}
+
+		#map {
+			margin-top: 10px;
+			margin-left: 10px;
+			height: 525px;
+			width: 50%;
+			border: 2px solid #BDBCBD;
+			float: left;
+		}
+
+		.tabs {
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-left: 52%;
+			height: 525px;
+			border: 2px solid #BDBCBD;
+		}
+
+		.container {
+			margin-top: 10px;
+			float:left;
+			position:relative;
+			width:99%;
+			height: 550px;
+			border: 2px solid #333300;
+		}
+
+		.tabs-nav {
+		  display: flex;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.tabs-nav-link {
+		  flex: 1;
+		  margin-right: 4px;
+		  padding: 12px;
+		  color: #fff;
+		  background-color: #85adad;
+		  text-align: center;
+		  transition: color 0.3s;
+		}
+
+		.tabs-nav-link:last-child {
+		  margin-right: 0;
+		}
+
+		.tabs-nav-link:hover {
+		  color: #ffe6cc;
+		}
+
+		.tabs-nav-link.is-active {
+		  color: #0099cc;
+		  background-color: #e7e7e7;
+		  font-weight: bold;
+		}
+
+		.tabs-nav-link i,
+		.tabs-nav-link span {
+		  margin: 0;
+		  padding: 0;
+		  line-height: 1;
+		}
+
+		.tabs-nav-link i {
+		  font-size: 18px;
+		}
+
+		.tabs-nav-link span {
+		  display: none;
+		  font-size: 18px;
+		}
+
+
+		.tabs-nav-link i {
+		    margin-bottom: 12px;
+		    font-size: 22px;
+		  }
+		
+		.tabs-nav-link span {
+		    display: block;
+		  }
+		
+
+		.tab {
+		  display: none;
+		  background-color: #e7e7e7;
+		  height: 70px;
+		}
+
+		.tab.is-active {
+		  display: block;
+		}
+
+		.tab__content {
+		  padding: 1rem;
+		}
+
+		.details_info {
+			background-color: #e7e7e7;
+			height: 414px;
+			overflow: scroll;
+		}	
+
+		.header {
+			color: #1a1aff;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+
+		#imgbox 
+		{
+		    position : absolute; 
+		    filter: Alpha(Opacity=0);
+		    visibility : hidden;
+		    height : 350px;
+		    width : 350px;
+		    z-index : 50;
+		    overflow : hidden;
+		}
+
+		#btn 
+		{
+		    position : absolute; 
+		    filter: Alpha(Opacity=0);
+		    visibility : hidden;
+		    height : 30px;
+		    width : 30px;
+		    z-index : 50;
+		    overflow : hidden;
+		}
+
+	
+

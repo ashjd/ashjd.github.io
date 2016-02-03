@@ -1,0 +1,121 @@
+<!Doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CityBook</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+	<nav class="fixed-nav-bar">
+	  <div id="menu" class="menu">
+	  		<label class = "sitename"> CityBook </label>
+	  		<input id="place-input" class='search-input' type="text" placeholder="Please enter a City name to search">
+	  		<label class = "caption"> Know more about any city </label>
+	  </div>
+	</nav>
+
+	<div id = "container" class = "container">
+		
+		<div id="map" class = "map"> </div>
+		<div id="imgbox"> </div>
+		<div id = "btn"> <button type="button" onclick="closeMe()">X</button>  </div>
+
+		<div id = "tabs" class = "tabs">
+			<div class = "tabs-nav">
+				<a href="#" class="tabs-nav-link is-active">
+		            <i class="tab-head"></i>
+		            <span> Entertainment </span>
+		          </a>
+		          <a href="#" class="tabs-nav-link">
+		            <i class="tab-head"></i>
+		            <span> Lodging </span>
+		          </a>
+		          <a href="#" class="tabs-nav-link">
+		            <i class="tab-head"></i>
+		            <span> Dining </span>
+		          </a>
+		          <a href="#" class="tabs-nav-link">
+		            <i class="tab-head"></i>
+		            <span> Shopping </span>
+		          </a>
+		          <a href="#" class="tabs-nav-link">
+		            <i class="tab-head"></i>
+		            <span> Recreation </span>
+		          </a>
+			</div>
+
+			<div class="tab is-active">
+	          <div class="tab__content">
+	            <p class = "header" id ="entertainment"> Please select a City Name to view the Entertainment options. </p> 
+	            
+	          </div>
+	        </div>
+
+	        <div class="tab">
+	          <div class="tab__content">
+	            <p class = "header" id="hotels"> Please select a City Name to view the Lodging Options. </p>  
+	            
+	          </div>
+	        </div>
+
+	        <div class="tab">
+	          <div class="tab__content">
+	      
+	            <p class = "header" id = "restaurants"> Please select a City Name to view the Dining options. </p> 
+	            
+	          </div>
+	        </div>
+
+	        <div class="tab">
+	          <div class="tab__content">
+	            <p class = "header" id = "store"> Please select a City Name to view the Shopping options. </p>   
+	            
+	          </div>
+	        </div>
+
+	        <div class="tab">
+	          <div class="tab__content">
+	            <p class = "header" id = "rec"> Please select a City Name to view the Recreation options. </p>  
+	          </div>
+	        </div>
+
+	        	<div id = "details_info" class = "details_info"></div>
+	    	
+	        </div>
+		</div>
+
+		
+
+	</div>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv2yuC05yWmnEBk8o_8g8mZevfcMW09PE&libraries=places&callback=initAutocomplete"
+         async defer> </script>
+
+	<script type="text/javascript" src="tabsNav.js"></script>
+	<script type="text/javascript" src="loadChoices.js"></script>
+	<script type="text/javascript" src="mapLoad.js"></script>
+	
+	
+	
+	<script type="text/javascript">
+
+		var myTabs = tabs({
+		    el: '#tabs',
+		    tabNavigationLinks: '.tabs-nav-link',
+		    tabContentContainers: '.tab'
+		  });
+
+		 myTabs.init();
+	</script>
+
+
+	
+</body>
+
+</html>
