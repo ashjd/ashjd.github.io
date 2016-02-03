@@ -68,7 +68,7 @@
 		    });
 
 		    map.fitBounds(bounds);
-		    //activateContent (0);
+		    activateContent (0);
 		  });
 	
 	}

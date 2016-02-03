@@ -47,36 +47,6 @@
 		      }
 		    };
 
-		    var activateContent = function (index){
-
-		    	var userChoice = [];
-
-				while (userChoice.length > 0){
-					userChoice.pop();
-				}
-
-				switch (index){
-		    		
-		    		case 0 : userChoice.push('casino', 'night_club', 'movie_theater');
-		    				 document.getElementById("entertainment").innerHTML = "Here are some details about your Entertainment options in the city."; 
-		    				 break;
-		    		case 1 : userChoice.push('lodging'); 
-		    				 document.getElementById("hotels").innerHTML = "Here are some details about your Lodging options in the city."; 
-		    				 break;
-		    		case 2 : userChoice.push('restaurant', 'cafe');
-		    				 document.getElementById("restaurants").innerHTML = "Here are some details about your Dining options in the city."; 
-		    				 break;
-		    		case 3 : userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
-		    				 document.getElementById("store").innerHTML = "Here are some details about your Shopping options in the city."; 
-		    				 break;
-		    		case 4 : userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
-		    				 document.getElementById("rec").innerHTML = "Here are some details about your Recreation options in the city."; 
-		    				 break;
-		    	}
-
-		    	loadMapContents (userChoice, index);
-		    }
-
 		     // Returns init and goToTab 
 		    return {
 		      init: init,
