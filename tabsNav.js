@@ -1,6 +1,5 @@
-		var activeIndex = 0;
 		
-		(function() {
+	(function() {
 
 		   // The Tabs component.
 		   
@@ -10,9 +9,10 @@
 		    var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
 		    var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
 		    var initCalled = false;
+		    activeIndex = 0;
 
 		    
-		      //Initializes the component by attaching event listeners to each of the nav items.
+		      //For initializing the component by attaching event listeners to each of the nav items.
 		   
 		    var init = function() {
 		      if (!initCalled) {
@@ -25,7 +25,7 @@
 		      }
 		    };
 
-		     //Handles click event listeners on each of the links in the tab navigation.
+		     //for handling click event listeners on each of the links in the tab navigation.
 		     
 		    var handleClick = function(link, index) {
 		      link.addEventListener('click', function(e) {

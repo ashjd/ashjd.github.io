@@ -1,3 +1,5 @@
+// This function intends to receive the active tab index and send the appropriate place_type for query to the google places API
+
 		    var activateContent = function (index){
 
 		    	imgbox.style.visibility='hidden';
@@ -34,7 +36,7 @@
 
 
 
-// This function loads the appropriate information on the map according to user's choice of place types.  
+// This function sends the appropriate query according to user's choice of place types and retrieves information with nearby search.
 
 var markersC = [];
 var markersP = [];
@@ -63,12 +65,14 @@ function loadMapContents (userChoice) {
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 	    for (var i = 0; i < results.length; i++) {
-	      //createMarker(results[i]);
+	      
 	      showDetails(results[i]);
 	      createPhotoMarker(results[i]);
 	    }
 	 }
 }
+
+// Creating markers on the map
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
@@ -115,6 +119,7 @@ function createPhotoMarker(place) {
   markersP.push(marker);
 }
 
+// Retrieving and displaying details of the places received by the search 
 
 function showDetails (place){
 		
@@ -131,7 +136,7 @@ function showDetails (place){
     
 }
 
-
+// Closing enlarged image view
 function closeMe(){
 	var imgbox=document.getElementById("imgbox");
     	imgbox.style.visibility='hidden';

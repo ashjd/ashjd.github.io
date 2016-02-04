@@ -1,5 +1,3 @@
-	var map;
-
 	function initAutocomplete() {
 		  
 		  	map = new google.maps.Map(document.getElementById('map'), {
@@ -10,7 +8,7 @@
 
 		  	var markers = [];
 
-		  		// Create the search box and link it to the UI element.
+		  		// Create the search box and link it to the UI element to retrieve user selection
 		  	
 		  	var input = document.getElementById('place-input');
 		  	
