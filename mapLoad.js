@@ -4,7 +4,7 @@
 		  
 		  	map = new google.maps.Map(document.getElementById('map'), {
 		   	 	center: {lat: 37.7833, lng: -122.431297},
-		    	zoom: 14,
+		    	zoom: 15,
 		    	mapTypeId: google.maps.MapTypeId.ROADMAP
 		  	});
 
@@ -34,8 +34,12 @@
 
 		    		// Clear out the old markers.
 		    	markers.forEach(function(marker) {
-		      	marker.setMap(null);
-		    });
+		      		marker.setMap(null);
+		    	});
+		    	
+		    	imgbox.style.visibility='hidden';
+    			btn.style.visibility="hidden";
+
 		    
 		    document.getElementById("details_info").innerHTML = "";
 
@@ -68,7 +72,7 @@
 		    });
 
 		    map.fitBounds(bounds);
-		    activateContent (0);
+		    activateContent (activeIndex);
 		  });
 	
 	}

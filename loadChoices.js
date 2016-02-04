@@ -1,5 +1,8 @@
 		    var activateContent = function (index){
 
+		    	imgbox.style.visibility='hidden';
+    			btn.style.visibility="hidden";
+
 		    	var userChoice = [];
 
 				while (userChoice.length > 0){
