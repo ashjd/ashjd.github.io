@@ -2,14 +2,14 @@
 
 		    var activateContent = function (index){
 
-		    	imgbox.style.visibility='hidden';
-    			btn.style.visibility="hidden";
-
 		    	var userChoice = [];
 
 				while (userChoice.length > 0){
 					userChoice.pop();
 				}
+
+				imgbox.style.visibility='hidden';
+    			btn.style.visibility="hidden";
 
 				switch (index){
 		    		
@@ -130,7 +130,7 @@ function showDetails (place){
     	if (status == google.maps.places.PlacesServiceStatus.OK) {
     		var webLink = details.name;
     		var web = webLink.link (details.website);
-        	document.getElementById("details_info").innerHTML += "<br />" + "<br />" + "<strong>" + web + "</strong>" + "<br />" + details.formatted_address + "<br />" + "User Rating :  <strong>" +  details.rating + " </strong> <br />" + details.formatted_phone_number ;
+        	document.getElementById("details_info").innerHTML += "<br />" + "<br />" + "<strong>" + web + "</strong>" + "<br />" + details.formatted_address + "<br />" + "User Rating :  <strong>" +  details.rating + " </strong> <br /> Phone Number : " + details.formatted_phone_number ;
         }
     });
     

@@ -115,14 +115,16 @@
 		}
 
 
-		.tabs-nav-link i {
-		    margin-bottom: 12px;
-		    font-size: 22px;
-		  }
-		
-		.tabs-nav-link span {
-		    display: block;
-		  }
+		@media all and (min-width: 720px) {
+			.tabs-nav-link i {
+			    margin-bottom: 12px;
+			    font-size: 22px;
+			  }
+			
+			.tabs-nav-link span {
+			    display: block;
+			  }
+		}
 		
 
 		.tab {
