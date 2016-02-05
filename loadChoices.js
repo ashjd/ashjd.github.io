@@ -10,6 +10,7 @@
 
 				imgbox.style.visibility='hidden';
     			btn.style.visibility="hidden";
+    			imgName.style.visibility="hidden";
 
 				switch (index){
 		    		
@@ -110,10 +111,12 @@ function createPhotoMarker(place) {
   		var imgbox=document.getElementById("imgbox");
     	imgbox.style.visibility='visible';
     	btn.style.visibility='visible';
+    	imgName.style.visibility = 'visible'
   		var img = document.createElement('img');
   		img.src = photos[0].getUrl({'maxWidth': 400, 'maxHeight': 400});
   		imgbox.innerHTML = "";
 		imgbox.appendChild(img);
+		document.getElementById("imgName").innerHTML = place.name;
  });
 
   markersP.push(marker);
@@ -141,4 +144,5 @@ function closeMe(){
 	var imgbox=document.getElementById("imgbox");
     	imgbox.style.visibility='hidden';
     	btn.style.visibility="hidden";
+    	imgName.style.visibility="hidden";
 }

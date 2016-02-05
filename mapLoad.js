@@ -37,6 +37,7 @@
 		    	
 		    	imgbox.style.visibility='hidden';
     			btn.style.visibility="hidden";
+    			imgName.style.visibility="hidden";
 
 		    
 		    document.getElementById("details_info").innerHTML = "";

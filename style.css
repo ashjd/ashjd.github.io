@@ -161,10 +161,12 @@
 		#imgbox 
 		{
 		    position : absolute; 
+		    margin-top: 30px;
+		    margin-left: 10px;
 		    filter: Alpha(Opacity=0);
 		    visibility : hidden;
-		    height : 350px;
-		    width : 350px;
+		    height : 300px;
+		    width : 250px;
 		    z-index : 50;
 		    overflow : hidden;
 		}
@@ -172,12 +174,26 @@
 		#btn 
 		{
 		    position : absolute; 
+		    margin-top: 10px;
+		    margin-left: 10px;
 		    filter: Alpha(Opacity=0);
 		    visibility : hidden;
 		    height : 30px;
 		    width : 30px;
 		    z-index : 50;
 		    overflow : hidden;
+		}
+
+		.topleft {
+		    position: absolute;
+		    font-size: 18px;
+		    top: 10px;
+		    left: 35px;
+		    z-index : 50;
+		    visibility : hidden;
+		    font-weight: bold;
+		    color: #4d4d4d;
+		    background-color: #f2f2f2;
 		}
 
 	
