@@ -145,13 +145,16 @@
 		}
 
 		.tab__content {
-		  padding: 1rem;
+		  padding: 18px;
 		}
 
 		.details_info {
 			background-color: #e7e7e7;
 			height: 414px;
 			overflow: scroll;
+			padding-left: 18px;
+			padding-right: 12px;
+			padding-bottom: 10px;
 		}	
 
 		.header {
@@ -164,8 +167,8 @@
 		#imgbox 
 		{
 		    position : absolute; 
-		    margin-top: 30px;
-		    margin-left: 10px;
+		    margin-top: 31px;
+		    margin-left: 11px;
 		    filter: Alpha(Opacity=0);
 		    visibility : hidden;
 		    height : 300px;
@@ -177,8 +180,8 @@
 		#btn 
 		{
 		    position : absolute; 
-		    margin-top: 10px;
-		    margin-left: 10px;
+		    margin-top: 11px;
+		    margin-left: 11px;
 		    filter: Alpha(Opacity=0);
 		    visibility : hidden;
 		    height : 30px;
@@ -189,14 +192,17 @@
 
 		.topleft {
 		    position: absolute;
+		    height: 21px;
 		    font-size: 18px;
-		    top: 10px;
-		    left: 35px;
+		    top: 11px;
+		    left: 34px;
 		    z-index : 50;
 		    visibility : hidden;
 		    font-weight: bold;
-		    color: #003399;
-		    background-color: #f2f2f2;
+		    color: #0086b3;
+		    background-color: #e7e7e7;
+		    padding-left: 8px;
+		    padding-right: 8px;
 		}
 
 	

@@ -1,18 +1,18 @@
 	function initAutocomplete() {
-		  
-		  	map = new google.maps.Map(document.getElementById('map'), {
-		   	 	center: {lat: 37.7833, lng: -122.431297},
-		    	zoom: 15,
-		    	mapTypeId: google.maps.MapTypeId.ROADMAP
-		  	});
 
-		  	var markers = [];
+			var markers = [];
 
 		  		// Create the search box and link it to the UI element to retrieve user selection
 		  	
 		  	var input = document.getElementById('place-input');
 		  	
 		  	var searchBox = new google.maps.places.SearchBox(input);
+		  
+		  	map = new google.maps.Map(document.getElementById('map'), {
+		   	 	center: {lat: 37.7833, lng: -122.431297},
+		    	zoom: 15,
+		    	mapTypeId: google.maps.MapTypeId.ROADMAP
+		  	});
 
 		  		// Bias the SearchBox results towards current map's viewport.
 		  	
