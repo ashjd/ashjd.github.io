@@ -6,7 +6,7 @@
 		  height: 70px;
 		  background-color: #669999;
 		  position: fixed;
-		  z-index: 9999;
+		  z-index: 1000;
 		}
 
 		.menu {
@@ -45,6 +45,7 @@
 		  margin-bottom: 10px;
 		  margin-top: 15px;
 		  position: fixed;
+		  z-index: 3000;
 		}
 
 		#map {
