@@ -15,19 +15,19 @@
 				switch (index){
 		    		
 		    		case 0 : userChoice.push('casino', 'night_club', 'movie_theater');
-		    				 document.getElementById("entertainment").innerHTML = "Entertainment options information within the current AREA shown by the MAP."; 
+		    				 document.getElementById("entertainment").innerHTML = "Entertainment options shown for CURRENT MAP BOUNDS."; 
 		    				 break;
 		    		case 1 : userChoice.push('lodging'); 
-		    				 document.getElementById("hotels").innerHTML = "Lodging options information within the current AREA shown by the MAP."; 
+		    				 document.getElementById("hotels").innerHTML = "Lodging options shown for CURRENT MAP BOUNDS."; 
 		    				 break;
 		    		case 2 : userChoice.push('restaurant', 'cafe');
-		    				 document.getElementById("restaurants").innerHTML = "Dining options information within the current AREA shown by the MAP."; 
+		    				 document.getElementById("restaurants").innerHTML = "Dining options shown for CURRENT MAP BOUNDS."; 
 		    				 break;
 		    		case 3 : userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
-		    				 document.getElementById("store").innerHTML = "Shopping options information within the current AREA shown by the MAP."; 
+		    				 document.getElementById("store").innerHTML = "Shopping options shown for CURRENT MAP BOUNDS."; 
 		    				 break;
 		    		case 4 : userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
-		    				 document.getElementById("rec").innerHTML = "Recreation options information within the current AREA shown by the MAP."; 
+		    				 document.getElementById("rec").innerHTML = "Recreation options shown for CURRENT MAP BOUNDS."; 
 		    				 break;
 		    	}
 
