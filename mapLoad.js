@@ -73,6 +73,10 @@
 		    map.fitBounds(bounds);
 		    activateContent (activeIndex);
 		  });
+
+		google.maps.event.addListener(map, 'zoom_changed', function() {
+			activateContent (activeIndex);	
+		});
 	
 	}
 

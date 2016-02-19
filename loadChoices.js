@@ -42,7 +42,7 @@
 var markersC = [];
 var markersP = [];
 
-function loadMapContents (userChoice) {
+var loadMapContents = function (userChoice) {
 
 	document.getElementById("details_info").innerHTML = "";
 	// Clear out the old markers.
@@ -63,7 +63,7 @@ function loadMapContents (userChoice) {
 	  }, callback);
 }
 
-function callback(results, status) {
+var callback = function (results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 	    for (var i = 0; i < results.length; i++) {
 	      
@@ -75,7 +75,7 @@ function callback(results, status) {
 
 // Creating markers on the map
 
-function createMarker(place) {
+var createMarker = function (place) {
 	var placeLoc = place.geometry.location;
 	var marker = new google.maps.Marker({
 	   	map: map,
@@ -93,7 +93,7 @@ function createMarker(place) {
 }
 
 
-function createPhotoMarker(place) {
+var createPhotoMarker = function (place) {
   var photos = place.photos;
   if (!photos) {
   	createMarker(place);
@@ -124,7 +124,7 @@ function createPhotoMarker(place) {
 
 // Retrieving and displaying details of the places received by the search 
 
-function showDetails (place){
+var showDetails  = function (place){
 		
 	var request = { reference: place.reference };
     var	service = new google.maps.places.PlacesService(map);
@@ -144,9 +144,9 @@ function showDetails (place){
 }
 
 // Closing enlarged image view
-function closeMe(){
+var closeMe = function (){
 	var imgbox=document.getElementById("imgbox");
     	imgbox.style.visibility='hidden';
     	btn.style.visibility="hidden";
     	imgName.style.visibility="hidden";
-}
+};
