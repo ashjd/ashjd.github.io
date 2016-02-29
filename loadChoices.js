@@ -1,6 +1,6 @@
 // This function intends to receive the active tab index and send the appropriate place_type for query to the google places API
 
-		    var activateContent = function (index){
+		    var activateContent = function(index) {
 
 		    	var userChoice = [];
 
@@ -12,26 +12,44 @@
     			btn.style.visibility="hidden";
     			imgName.style.visibility="hidden";
 
-				switch (index){
-		    		
-		    		case 0 : userChoice.push('casino', 'night_club', 'movie_theater');
-		    				 document.getElementById("entertainment").innerHTML = "Entertainment options shown for CURRENT MAP BOUNDS."; 
-		    				 break;
-		    		case 1 : userChoice.push('lodging'); 
-		    				 document.getElementById("hotels").innerHTML = "Lodging options shown for CURRENT MAP BOUNDS."; 
-		    				 break;
-		    		case 2 : userChoice.push('restaurant', 'cafe');
-		    				 document.getElementById("restaurants").innerHTML = "Dining options shown for CURRENT MAP BOUNDS."; 
-		    				 break;
-		    		case 3 : userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
-		    				 document.getElementById("store").innerHTML = "Shopping options shown for CURRENT MAP BOUNDS."; 
-		    				 break;
-		    		case 4 : userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
-		    				 document.getElementById("rec").innerHTML = "Recreation options shown for CURRENT MAP BOUNDS."; 
-		    				 break;
-		    	}
+				var getIndex = function(index){
+ 				
+ 				var indexes = {
+ 					0 : function(){
+ 							userChoice.push('casino', 'night_club', 'movie_theater');
+		    				document.getElementById("entertainment").innerHTML = "Entertainment options shown for CURRENT MAP BOUNDS."; 
+		    				return userChoice;
+ 						},
 
-		    	loadMapContents (userChoice, index);
+ 					1 : function(){
+ 							userChoice.push('lodging'); 
+		    				document.getElementById("hotels").innerHTML = "Lodging options shown for CURRENT MAP BOUNDS."; 	 
+		    				return userChoice;
+ 						},
+
+ 					2 : function (){
+ 							userChoice.push('restaurant', 'cafe');
+		    				document.getElementById("restaurants").innerHTML = "Dining options shown for CURRENT MAP BOUNDS.";  
+		    				return userChoice;
+ 						},
+
+ 					3 : function (){
+ 							userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
+		    				document.getElementById("store").innerHTML = "Shopping options shown for CURRENT MAP BOUNDS.";
+		    				return userChoice;
+ 						},
+
+ 					4 : function(){
+ 							userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
+		    				document.getElementById("rec").innerHTML = "Recreation options shown for CURRENT MAP BOUNDS."; 
+		    				return userChoice;
+ 						}
+ 				}
+
+ 				return indexes[index];
+ 			}
+
+		    	loadMapContents (getIndex(index)());
 		    }
 
 
@@ -42,7 +60,7 @@
 var markersC = [];
 var markersP = [];
 
-var loadMapContents = function (userChoice) {
+var loadMapContents = function(userChoice) {
 
 	document.getElementById("details_info").innerHTML = "";
 	// Clear out the old markers.
@@ -63,7 +81,7 @@ var loadMapContents = function (userChoice) {
 	  }, callback);
 }
 
-var callback = function (results, status) {
+var callback = function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 	    for (var i = 0; i < results.length; i++) {
 	      
@@ -75,7 +93,7 @@ var callback = function (results, status) {
 
 // Creating markers on the map
 
-var createMarker = function (place) {
+var createMarker = function(place) {
 	var placeLoc = place.geometry.location;
 	var marker = new google.maps.Marker({
 	   	map: map,
@@ -93,7 +111,7 @@ var createMarker = function (place) {
 }
 
 
-var createPhotoMarker = function (place) {
+var createPhotoMarker = function(place) {
   var photos = place.photos;
   if (!photos) {
   	createMarker(place);
@@ -124,7 +142,7 @@ var createPhotoMarker = function (place) {
 
 // Retrieving and displaying details of the places received by the search 
 
-var showDetails  = function (place){
+var showDetails  = function(place) {
 		
 	var request = { reference: place.reference };
     var	service = new google.maps.places.PlacesService(map);
@@ -144,7 +162,7 @@ var showDetails  = function (place){
 }
 
 // Closing enlarged image view
-var closeMe = function (){
+var closeMe = function() {
 	var imgbox=document.getElementById("imgbox");
     	imgbox.style.visibility='hidden';
     	btn.style.visibility="hidden";

@@ -1,3 +1,5 @@
+	var map;
+
 	function initAutocomplete() {
 
 			var markers = [];
