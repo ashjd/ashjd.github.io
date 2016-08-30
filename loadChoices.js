@@ -1,59 +1,56 @@
 // This function intends to receive the active tab index and send the appropriate place_type for query to the google places API
 
-		    var activateContent = function(index) {
+var activateContent = function(index) {
 
-		    	var userChoice = [];
+  var userChoice = [];
 
-				while (userChoice.length > 0){
-					userChoice.pop();
+	while (userChoice.length > 0){
+		userChoice.pop();
+	}
+
+	imgbox.style.visibility='hidden';
+	btn.style.visibility="hidden";
+	imgName.style.visibility="hidden";
+
+	var getIndex = function(index){
+		
+		var indexes = {
+			0 : function(){
+					userChoice.push('casino', 'night_club', 'movie_theater');
+  				document.getElementById("entertainment").innerHTML = "Entertainment options shown for CURRENT MAP BOUNDS."; 
+  				return userChoice;
+				},
+
+			1 : function(){
+					userChoice.push('lodging'); 
+  				document.getElementById("hotels").innerHTML = "Lodging options shown for CURRENT MAP BOUNDS."; 	 
+  				return userChoice;
+				},
+
+			2 : function (){
+					userChoice.push('restaurant', 'cafe');
+  				document.getElementById("restaurants").innerHTML = "Dining options shown for CURRENT MAP BOUNDS.";  
+  				return userChoice;
+				},
+
+			3 : function (){
+					userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
+  				document.getElementById("store").innerHTML = "Shopping options shown for CURRENT MAP BOUNDS.";
+  				return userChoice;
+				},
+
+			4 : function(){
+					userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
+  				document.getElementById("rec").innerHTML = "Recreation options shown for CURRENT MAP BOUNDS."; 
+  				return userChoice;
 				}
+		};
 
-				imgbox.style.visibility='hidden';
-    			btn.style.visibility="hidden";
-    			imgName.style.visibility="hidden";
+		return indexes[index];
+	};
 
-				var getIndex = function(index){
- 				
- 				var indexes = {
- 					0 : function(){
- 							userChoice.push('casino', 'night_club', 'movie_theater');
-		    				document.getElementById("entertainment").innerHTML = "Entertainment options shown for CURRENT MAP BOUNDS."; 
-		    				return userChoice;
- 						},
-
- 					1 : function(){
- 							userChoice.push('lodging'); 
-		    				document.getElementById("hotels").innerHTML = "Lodging options shown for CURRENT MAP BOUNDS."; 	 
-		    				return userChoice;
- 						},
-
- 					2 : function (){
- 							userChoice.push('restaurant', 'cafe');
-		    				document.getElementById("restaurants").innerHTML = "Dining options shown for CURRENT MAP BOUNDS.";  
-		    				return userChoice;
- 						},
-
- 					3 : function (){
- 							userChoice.push('shopping_mall', 'grocery_or_supermarket', 'department_store', 'convenience_store'); 
-		    				document.getElementById("store").innerHTML = "Shopping options shown for CURRENT MAP BOUNDS.";
-		    				return userChoice;
- 						},
-
- 					4 : function(){
- 							userChoice.push('park','aquarium','art_gallery', 'museum', 'book_store', 'zoo'); 
-		    				document.getElementById("rec").innerHTML = "Recreation options shown for CURRENT MAP BOUNDS."; 
-		    				return userChoice;
- 						}
- 				}
-
- 				return indexes[index];
- 			}
-
-		    	loadMapContents (getIndex(index)());
-		    }
-
-
-
+	loadMapContents (getIndex(index)());
+};
 
 // This function sends the appropriate query according to user's choice of place types and retrieves information with nearby search.
 
@@ -79,17 +76,16 @@ var loadMapContents = function(userChoice) {
 	    bounds: bounds,
 	    types: userChoice
 	  }, callback);
-}
+};
 
 var callback = function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-	    for (var i = 0; i < results.length; i++) {
-	      
+	    for (var i = 0; i < results.length; i++) {      
 	      showDetails(results[i]);
 	      createPhotoMarker(results[i]);
 	    }
 	 }
-}
+};
 
 // Creating markers on the map
 
@@ -108,7 +104,7 @@ var createMarker = function(place) {
 	   	infowindow.setContent(place.name);
     	infowindow.open(map, this);
  	});
-}
+};
 
 
 var createPhotoMarker = function(place) {
@@ -138,7 +134,7 @@ var createPhotoMarker = function(place) {
  });
 
   markersP.push(marker);
-}
+};
 
 // Retrieving and displaying details of the places received by the search 
 
@@ -159,7 +155,7 @@ var showDetails  = function(place) {
     	}
     });
     
-}
+};
 
 // Closing enlarged image view
 var closeMe = function() {
