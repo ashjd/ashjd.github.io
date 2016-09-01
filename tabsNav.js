@@ -1,8 +1,4 @@
-
-(function() {
-
-   // The Tabs component.
-   
+   // The Tabs component   
   var tabs = function (options) {
 
     var el = document.querySelector(options.el);
@@ -58,4 +54,4 @@
    // Attach to global namespace		   
   window.tabs = tabs;
 
-})();
+
